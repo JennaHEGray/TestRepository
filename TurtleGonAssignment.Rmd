@@ -1,0 +1,77 @@
+---
+title: "March 10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{python}
+import turtle
+from time import sleep
+
+class TurtleGon(turtle.Turtle):
+    def colorgon(self, colorlist, side=50, fillcolor=None):
+        angle = 180 - 180 * (len(colorlist) - 2) / len(colorlist)
+        if fillcolor is not None:
+            self.fillcolor(fillcolor)
+            self.begin_fill()
+        for color in colorlist:
+            self.pencolor(color)
+            self.forward(side)
+            self.left(angle)
+        if fillcolor is not None:
+            self.end_fill()
+        return
+
+franklin = TurtleGon()
+sleep(5)
+turtle.Screen().bgcolor("black")
+franklin.colorgon(["teal","gray","yellow","maroon","cyan"], fillcolor="orange")
+franklin.penup()
+franklin.right(15)
+franklin.forward(190)
+franklin.pendown()
+franklin.colorgon(["red","orange","yellow"], fillcolor="khaki")
+franklin.penup()
+franklin.right(30)
+franklin.backward(200)
+franklin.pendown()
+franklin.colorgon(["green","yellow","green","yellow","green"], fillcolor="gold")
+franklin.penup()
+franklin.left(45)
+franklin.forward(200)
+franklin.pendown()
+franklin.colorgon(["indigo","gray","white","indigo","gray","white"], fillcolor="purple")
+sleep(5)
+```
+
+```{python}
+import turtle
+from time import sleep
+
+class TurtleGon(turtle.Turtle):
+    def colorgon(self, colorlist, side=50, fillcolor=None):
+        angle = 180 - 180 * (len(colorlist) - 2) / len(colorlist)
+        if fillcolor is not None:
+            self.fillcolor(fillcolor)
+            self.begin_fill()
+        for color in colorlist:
+            self.pencolor(color)
+            self.forward(side)
+            self.left(angle)
+        if fillcolor is not None:
+            self.end_fill()
+        return
+
+franklin = TurtleGon()
+sleep(5)"
+franklin.colorgon(["red","green","green","orange"], fillcolor="purple")
+sleep(5)
+```
+
+```{python}
+franklin.clear()
+```
+
